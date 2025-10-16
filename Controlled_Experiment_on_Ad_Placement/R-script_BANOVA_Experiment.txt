@@ -1,0 +1,9 @@
+library(rstan)
+library(BANOVA)
+expdata=read.csv('data_exp.csv')
+res2 <- BANOVA.run(Ad_Gaze~Experimental*Context, model_name = 'Normal',
+                   data = expdata, id = 'id', iter = 1000, chains = 2)
+summary(res2)
+res3 <- BANOVA.run(Brand_Gaze~Experimental*Context, model_name = 'Normal',
+                   data = expdata, id = 'id', iter = 1000, chains = 2)
+summary(res3)
