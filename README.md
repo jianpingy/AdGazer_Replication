@@ -41,4 +41,4 @@ The ad placement optimization is done by running the code cells in the `Experime
 ## Web App
 The web app AdGazer can be initiated by running `AdGazer_WebApp.py`.
 
-**Note:** If GPUs are available locally, for full capability of the AdGazer, you may uncomment the image caption generation code (lines 108-114) and comment out the randomly initialized `ad_topic` and `ctpg_topic`. By default, the image caption generation function is turned off due to potential computation limit.
+**Note:** If GPUs are available locally, for full capability of the AdGazer, you may uncomment the image caption generation code, lines 108-114, and comment out lines 115-117. By default, the image caption generation function is turned off due to potential computation limit.
