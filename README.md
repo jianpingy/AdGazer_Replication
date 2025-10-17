@@ -37,3 +37,8 @@ The folder provides codes used by authors to produce the placement optimization 
 **Note:** Currently, we only share 50 sample ads and their contexts, along with their ground-truth ad and brand gaze, randomly selected from our main dataset to illustrate how the optimization works. These 50 samples are in the subfolder `Sample_Ad_Data/stimuli`, and their ad/brand gaze are in `true_AGs.pt`/`true_BGs.pt` (which should be loaded by `torch.load()`).
 
 The ad placement optimization is done by running the code cells in the `Experiment_Notebook.ipynb`.
+
+## Web App
+The web app AdGazer can be initiated by running `AdGazer_WebApp.py`.
+
+**Note:** If GPUs are available locally, for full capability of the AdGazer, you may uncomment the image caption generation code (lines 108-114) and comment out the randomly initialized `ad_topic` and `ctpg_topic`. By default, the image caption generation function is turned off due to potential computation limit.
