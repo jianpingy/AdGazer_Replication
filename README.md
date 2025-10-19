@@ -19,21 +19,25 @@ For all codes in this repository that reproduce the results in the paper, an Int
 ## Folder and File Descriptions
 ### Source Files in `src`
 This section describes the source files in the `src` folder:
-- `Ad_Gaze_Model`: the folder containing parameters of the XGBoost model for ad gaze predictions.
-- `Brand_Gaze_Model`: the folder containing parameters of the XGBoost model for brand gaze predictions.
-- `Brand_Share_Model`: the folder containing parameters of the XGBoost model for brand share predictions.
+- `Ad_Gaze_Model`: the folder containing parameters of the 10 XGBoost models for ad gaze predictions.
+- `Brand_Gaze_Model`: the folder containing parameters of the 10 XGBoost models for brand gaze predictions.
+- `Brand_Share_Model`: the folder containing parameters of the 10 XGBoost models for brand share predictions.
 - `CNN_Gaze_Model`: the folder containing parameters of the CNN model fine-tuned by ad gaze (AG), brand gaze (BG) and brand share (BS).
 - `EAST-Text-Detection`: the folder containing parameters of the EAST text detection model.
 - `Magazine_Topic_Embedding_sample_size15`: the folder containing parameters and configurations of the sentence transformer for topic embeddings.
 - `SIFT`: 
     - `kmeans.pt`: the k-mean cluster info used by our SIFT feature extractor, saved in pytorch file.
     - `pca.pt`: the pca info used to compress the SIFT features, saved in pytorch file.
+- `Topic_Embedding_PCAs`: the 10 PCA info used to compress the topic embeddings. The ith PCA info was calculated from the ith-fold training data.
+- `DL_models.py`: python codes of all deep learning models used in the paper.
+- `Predict.py`: python codes of the attention predictions.
+- `XGBoost_utils.py`: python codes of all the algorithms and utility functions used.
 
 
-## Pretrained Sentence Transformer Model (Note: Faster Performance with GPUs)
-You can download the [pre-trained model](https://drive.google.com/file/d/1_Vv1AXZsQGw41s-Q3bcg-k6aos5fK0Pd/view?usp=sharing). The downloaded file should be put under `src/Magazine_Topic_Embedding_sample_size15`.
+### Trained Sentence Transformer Model (Note: Faster Performance with GPUs)
+Download our [trained model](https://drive.google.com/file/d/1_Vv1AXZsQGw41s-Q3bcg-k6aos5fK0Pd/view?usp=sharing). The downloaded file should be put under `src/Magazine_Topic_Embedding_sample_size15`.
 
-## Preprocessed Data for Model Training
+### Preprocessed Data for Model Training
 All datasets from the 10-fold-cross-validation experiments are shared in `Shapley_and_ALE_Values/Data`.
 
 ## Pretrained XGBoost/CNN Models
