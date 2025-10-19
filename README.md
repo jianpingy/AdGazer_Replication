@@ -69,7 +69,7 @@ The folder also includes:
 - `data_exp.csv`: the csv file that contains processed ad/brand gaze data given random/observed/no context after matching process. Details about the preprocessing can be found in Section *Controlled Experiment on Ad Placement* of the paper.
 
 
-### Study: In-Sillico Experiments on Optimal Ad Placement (folder: In-Silico_Experiments_random)
+### Study: In-Silico Experiments on Optimal Ad Placement (folder: In-Silico_Experiments_random)
 Run the code cells in `Experiment_Notebook.ipynb` to understand how the ad placement optimization is done.
 
 **Note:** Currently, we only share 50 sample ads and their contexts, along with their ground-truth ad and brand gaze, randomly selected from our main dataset to illustrate how the optimization works. These 50 samples are in the subfolder `Sample_Ad_Data/stimuli`, and their ad/brand gaze are in `true_AGs.pt`/`true_BGs.pt` (which should be loaded by `torch.load()`).
