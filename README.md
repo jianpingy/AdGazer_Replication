@@ -1,13 +1,34 @@
-## AdGazer_Replication
-This repo provides the codes to reproduce the results from *Jianping Ye, Michel Wedel, Pieters, AdGazer: Improving Contextual Advertising with Theory-Informed Machine Learning*.
+## Overview
+This repository provides the codes to reproduce the results from *Jianping Ye, Michel Wedel, Pieters, AdGazer: Improving Contextual Advertising with Theory-Informed Machine Learning*. We propose an *Alternative Disclosure Plan* for a delay of the release of our main dataset of the ad-context pairs. However, to maximize the reproducibility of the paper's results in this situation, we provide:
 
-## Get Started
-Environment Setup:
+- All preprocessed data used in the paper for model training, i.e. all features extracted from ad and context images in our main dataset with our algorithms;
+- All codes for the algorithms and models used in the paper;
+- All trained models (Sentence Transformer, XGBoost, CNN) and pre-trained models used;
+- Complete codes and data that reproduce the results for the study of Out-of-Distribution generalization, the study of the model interpretation and the study of the controlled experiment on ad placement;
+- Complete codes and partial data that illustrate how we conduct the study of the In-Silico experiments;
+- Complete codes for deploying the web app.
 
-Run the following to set up your environment with conda:
+## Computational Requirements
+The computation environment is specified by the YAML `environment.yml`. Run the following to set up your environment with conda:
 ```bash
 $ conda env create -f environment.yml
 ```
+
+For all codes in this repository that reproduce the results in the paper, an Intel CPU on [Colab (an online coding platform provided by Google)](https://colab.google) is sufficient. For codes of Multimodal Large Language Models (MLLM) and Convolutional Neural Networks (CNNs), an NVIDIA T4 GPU with 15GB provided by Colab is sufficient.
+
+## Folder and File Descriptions
+### Source Files in `src`
+This section describes the source files in the `src` folder:
+- `Ad_Gaze_Model`: the folder containing parameters of the XGBoost model for ad gaze predictions.
+- `Brand_Gaze_Model`: the folder containing parameters of the XGBoost model for brand gaze predictions.
+- `Brand_Share_Model`: the folder containing parameters of the XGBoost model for brand share predictions.
+- `CNN_Gaze_Model`: the folder containing parameters of the CNN model fine-tuned by ad gaze (AG), brand gaze (BG) and brand share (BS).
+- `EAST-Text-Detection`: the folder containing parameters of the EAST text detection model.
+- `Magazine_Topic_Embedding_sample_size15`: the folder containing parameters and configurations of the sentence transformer for topic embeddings.
+- `SIFT`: 
+    - `kmeans.pt`: the k-mean cluster info used by our SIFT feature extractor, saved in pytorch file.
+    - `pca.pt`: the pca info used to compress the SIFT features, saved in pytorch file.
+
 
 ## Pretrained Sentence Transformer Model (Note: Faster Performance with GPUs)
 You can download the [pre-trained model](https://drive.google.com/file/d/1_Vv1AXZsQGw41s-Q3bcg-k6aos5fK0Pd/view?usp=sharing). The downloaded file should be put under `src/Magazine_Topic_Embedding_sample_size15`.
@@ -16,7 +37,7 @@ You can download the [pre-trained model](https://drive.google.com/file/d/1_Vv1AX
 All datasets from the 10-fold-cross-validation experiments are shared in `Shapley_and_ALE_Values/Data`.
 
 ## Pretrained XGBoost/CNN Models
-All pretrained models are in `src`.
+All pretrained models are in `src`, categorized by 
 
 ## Study: Out-of-Distribution (OOD) Generalization (folder: Out-of-Distribution_Samples)
 Run `main.py` to reproduce the OOD generalization results in the paper.
