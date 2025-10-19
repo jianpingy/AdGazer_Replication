@@ -35,7 +35,9 @@ The `src` folder includes:
 
 
 ### Model Parameters of the Trained Sentence Transformer Model
-Download our [trained model](https://drive.google.com/file/d/1_Vv1AXZsQGw41s-Q3bcg-k6aos5fK0Pd/view?usp=sharing). The downloaded file should be put under `src/Magazine_Topic_Embedding_sample_size15`.
+Download our [trained model](https://drive.google.com/file/d/1_Vv1AXZsQGw41s-Q3bcg-k6aos5fK0Pd/view?usp=sharing) for the sentence transformer model of the topic embeddings. 
+
+The downloaded file should be put under `src/Magazine_Topic_Embedding_sample_size15`.
 
 
 ### Study: Out-of-Distribution (OOD) Generalization (folder: Out-of-Distribution_Samples)
