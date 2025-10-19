@@ -18,7 +18,7 @@ For all codes in this repository that reproduce the results in the paper, an Int
 
 ## Folder and File Descriptions
 ### Source Files in `src`
-This section describes the source files in the `src` folder:
+The `src` folder includes:
 - `Ad_Gaze_Model`: the folder containing parameters of the 10 XGBoost models for ad gaze predictions.
 - `Brand_Gaze_Model`: the folder containing parameters of the 10 XGBoost models for brand gaze predictions.
 - `Brand_Share_Model`: the folder containing parameters of the 10 XGBoost models for brand share predictions.
@@ -79,8 +79,10 @@ The folder also includes:
 - `average_nonobserv.pt`: the pytorch file containing the averages of the non-observable features that help turn off the individual ones for observable feature based ad placement.
 - `Magazine_Optimization.py`: the python file containing all codes for the optimization algorithms.
 
-### Web App
+### Web App and Demo folder
 The web app AdGazer can be initiated by running `AdGazer_WebApp.py`.
+
+The `Demo` folder contains sample images used by the Web App.
 
 **Note:** If GPUs are available locally, for full capability of the AdGazer, you may uncomment the image caption generation code, lines 108-114, and comment out lines 115-117. By default, the image caption generation function is turned off due to potential computation limit.
 
