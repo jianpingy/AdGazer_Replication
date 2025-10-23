@@ -27,7 +27,7 @@ To view a copy of this license, visit:
 ### Attribution
 If you use this work, please include the following attribution:
 
-> © [Your Name or Organization], [Year]. Licensed under CC BY-NC-ND 4.0.  
+> © Jianping Ye, University of Maryland College Park, 2025. Licensed under CC BY-NC-ND 4.0.  
 > [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 ---
